@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.w-1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.w-full-1200 {
+  width: 100%;
+  min-width: 1200px;
+}
+
+.dot-selected {
+  background: white;
+  width: 40px;
+  height: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0 5px;
+  animation: scale 0.3s ease;
+  transition: all 0.3s ease; /* transition 효과 추가 */
+}
+
+.logo {
+  font-family: "Dongle", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.dongle {
+  font-family: "Dongle", sans-serif;
+}
+
+.poor-story {
+  font-family: "Poor Story", sans-serif;
+  font-size: 12px;
+}
+
+/* 테두리 강조 */
+.product_box {
+  transition: all 0.5s ease; /* transition 효과 추가 */
+}
+.product_box:hover {
+  /* 연한블루 색상 */
+  background-color: #e6f0ff;
+  /* 연한 레드 */
+  color: red;
+  cursor: pointer;
+}
+
+/* 오른쪽에서 왼쪽으로 이동 클래스 */
+.move_left {
+  animation: move_left 0.5s ease;
+}
+
+@keyframes move_left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* 이미지 점점 커짐 */
+.scale {
+  animation: scale 1s ease;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
