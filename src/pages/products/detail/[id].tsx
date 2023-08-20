@@ -58,9 +58,12 @@ export default function ProductDetail() {
           </div>
           <div className="flex flex-col items-end h-full">
             <p className="text-4xl font-bold text-red-600">250,000원</p>
-            <button className="w-full h-12 bg-red-600 text-white text-xl font-bold mt-auto">
+            <Link
+              className="w-full h-12 bg-red-600 text-white text-xl font-bold mt-auto flex justify-center items-center"
+              href={`/payment?product=${productItem.id}`}
+            >
               구매하기
-            </button>
+            </Link>
           </div>
         </div>
       </div>
